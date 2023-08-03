@@ -23,7 +23,27 @@ namespace EXCELAPPOTB
 
         private void btnTempData_Click(object sender, EventArgs e)
         {
+            int startRow = Convert.ToInt32(txtStartRow.Value);
+            int endRow = Convert.ToInt32(txtEndRow.Value);
+            int startCol = Convert.ToInt32(txtStartColumn.Value);
+            int endCol = Convert.ToInt32(txtEndColumn.Value);
+            dgvData.DataSource = ReadExcel(startRow, endRow, startCol, endCol, txtSheetNameData.Text);
+            txtTempData.Text = pathFile;
+        }
 
+        private void btnLichLamViec_Click(object sender, EventArgs e)
+        {
+            int startRow = Convert.ToInt32(txtPlanStartRow.Value);
+            int endRow = Convert.ToInt32(txtPlanEndRow.Value);
+            int startCol = Convert.ToInt32(txtPlanStartCol.Value);
+            int endCol = Convert.ToInt32(txtPlanEndCol.Value);
+            dgvPlan.DataSource = ReadExcel(startRow, endRow, startCol, endCol, txtSheetPlan.Text);
+            txtLichLamViec.Text = pathFile;
+        }
+       
+        private System.Data.DataTable ReadExcel(int startRow, int endRow, int startCol, int endCol, string sheeName)
+        {
+            System.Data.DataTable dtResult = new System.Data.DataTable();
 
             OpenFileDialog choofdlog = new OpenFileDialog();
             choofdlog.Filter = "Just file *.xlsx|*.xlsx";
@@ -33,34 +53,31 @@ namespace EXCELAPPOTB
             else
                 pathFile = string.Empty;
 
+           
+
             Microsoft.Office.Interop.Excel.Application objXL = null;
             Microsoft.Office.Interop.Excel.Workbook objWB = null;
             objXL = new Microsoft.Office.Interop.Excel.Application();
             objWB = objXL.Workbooks.Open(pathFile);
-            Microsoft.Office.Interop.Excel.Worksheet objSHT = objWB.Worksheets["Shop_828_BRVT"];
+            Microsoft.Office.Interop.Excel.Worksheet objSHT = objWB.Worksheets[sheeName];
 
-            int rows = objSHT.UsedRange.Rows.Count;
-            int cols = objSHT.UsedRange.Columns.Count;
-            int startRows = Convert.ToInt32(txtStartRow.Value);
-            int Endrow = Convert.ToInt32(txtEndRow.Value);
-            int StartCol = Convert.ToInt32(txtStartColumn.Value);
-            int EndCol = Convert.ToInt32(txtEndColumn.Value);
-
-            System.Data.DataTable dtResult = new System.Data.DataTable();
-            for (int c = StartCol; c <= EndCol; c++)
+            //int rows = objSHT.UsedRange.Rows.Count;
+            //int cols = objSHT.UsedRange.Columns.Count;
+            for (int c = startCol; c <= endCol; c++)
             {
                 string colname = objSHT.Cells[1, c].Text;
                 dtResult.Columns.Add(colname);
             }
 
-            progressBar1.Minimum = startRows;
-            progressBar1.Maximum = Endrow + 1;
-            for (int r = startRows; r <= Endrow; r++)
+            progressBar1.Minimum = startRow;
+            progressBar1.Maximum = endRow + 1;
+
+            for (int r = startRow; r <= endRow; r++)
             {
                 progressBar1.Visible = true;
 
                 DataRow dr = dtResult.NewRow();
-                for (int c = 1; c <= EndCol; c++)
+                for (int c = 1; c <= endCol; c++)
                 {
                     dr[c - 1] = objSHT.Cells[r, c].Text;
                 }
@@ -71,20 +88,10 @@ namespace EXCELAPPOTB
             }
 
             progressBar1.Visible = false;
-            System.Data.DataTable data = new System.Data.DataTable();
             objWB.Close(); // Đóng  Workbook.
             objXL.Quit(); // Đóng phần mềm Excel.
-            dgvData.DataSource = dtResult;
-        }
 
-        private void btnLichLamViec_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTempData_Click_1(object sender, EventArgs e)
-        {
-
+            return dtResult;
         }
     }
 }
