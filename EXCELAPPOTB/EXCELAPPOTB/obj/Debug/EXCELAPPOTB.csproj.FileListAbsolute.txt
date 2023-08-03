@@ -1,0 +1,15 @@
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\bin\Debug\EXCELAPPOTB.exe.config
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\bin\Debug\EXCELAPPOTB.exe
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\bin\Debug\EXCELAPPOTB.pdb
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\obj\Debug\EXCELAPPOTB.csproj.AssemblyReference.cache
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\obj\Debug\EXCELAPPOTB.Form1.resources
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\obj\Debug\EXCELAPPOTB.Properties.Resources.resources
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\obj\Debug\EXCELAPPOTB.csproj.GenerateResource.cache
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\obj\Debug\EXCELAPPOTB.csproj.CoreCompileInputs.cache
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\obj\Debug\EXCELAPPOTB.exe
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\obj\Debug\EXCELAPPOTB.pdb
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\bin\Debug\DocumentFormat.OpenXml.dll
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\bin\Debug\DocumentFormat.OpenXml.xml
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+E:\Code\C#\Winform\ExelAppOTB\EXCELAPPOTB\EXCELAPPOTB\obj\Debug\EXCELAPPOTB.csproj.CopyComplete
