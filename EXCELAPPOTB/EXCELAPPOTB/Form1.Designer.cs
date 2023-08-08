@@ -32,6 +32,8 @@ namespace EXCELAPPOTB
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtRowHeaderPlan = new System.Windows.Forms.NumericUpDown();
             this.txtSheetPlan = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtPlanEndCol = new System.Windows.Forms.NumericUpDown();
@@ -45,6 +47,8 @@ namespace EXCELAPPOTB
             this.btnLichLamViec = new System.Windows.Forms.Button();
             this.txtLichLamViec = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtRowHeaderData = new System.Windows.Forms.NumericUpDown();
             this.txtSheetNameData = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEndColumn = new System.Windows.Forms.NumericUpDown();
@@ -57,6 +61,7 @@ namespace EXCELAPPOTB
             this.label2 = new System.Windows.Forms.Label();
             this.txtEndRow = new System.Windows.Forms.NumericUpDown();
             this.txtStartRow = new System.Windows.Forms.NumericUpDown();
+            this.btnExport = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -65,21 +70,19 @@ namespace EXCELAPPOTB
             this.San = new System.Windows.Forms.GroupBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtRowHeaderData = new System.Windows.Forms.NumericUpDown();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtRowHeaderPlan = new System.Windows.Forms.NumericUpDown();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnReview = new System.Windows.Forms.Button();
-            this.progressBarReview = new System.Windows.Forms.ProgressBar();
+            this.lblProcess = new System.Windows.Forms.Label();
+            this.btnTemplate = new System.Windows.Forms.Button();
+            this.txtTemplate = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRowHeaderPlan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanEndCol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanStartCol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanEndRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanStartRow)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRowHeaderData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndColumn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartColumn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndRow)).BeginInit();
@@ -91,8 +94,6 @@ namespace EXCELAPPOTB
             this.San.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRowHeaderData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRowHeaderPlan)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox4
@@ -112,7 +113,6 @@ namespace EXCELAPPOTB
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 87.37075F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.62925F));
-            this.tableLayoutPanel3.Controls.Add(this.btnReview, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.groupBox2, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnExport, 1, 0);
@@ -148,6 +148,28 @@ namespace EXCELAPPOTB
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "File lịch làm việc";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(748, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 16);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Row header:";
+            // 
+            // txtRowHeaderPlan
+            // 
+            this.txtRowHeaderPlan.Location = new System.Drawing.Point(837, 13);
+            this.txtRowHeaderPlan.Name = "txtRowHeaderPlan";
+            this.txtRowHeaderPlan.Size = new System.Drawing.Size(63, 20);
+            this.txtRowHeaderPlan.TabIndex = 34;
+            this.txtRowHeaderPlan.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             // 
             // txtSheetPlan
             // 
@@ -274,6 +296,8 @@ namespace EXCELAPPOTB
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnTemplate);
+            this.groupBox1.Controls.Add(this.txtTemplate);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtRowHeaderData);
             this.groupBox1.Controls.Add(this.txtSheetNameData);
@@ -295,6 +319,28 @@ namespace EXCELAPPOTB
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "File dữ liệu";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(748, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 16);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Row header:";
+            // 
+            // txtRowHeaderData
+            // 
+            this.txtRowHeaderData.Location = new System.Drawing.Point(837, 13);
+            this.txtRowHeaderData.Name = "txtRowHeaderData";
+            this.txtRowHeaderData.Size = new System.Drawing.Size(63, 20);
+            this.txtRowHeaderData.TabIndex = 26;
+            this.txtRowHeaderData.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // txtSheetNameData
             // 
@@ -328,7 +374,7 @@ namespace EXCELAPPOTB
             // 
             // btnTempData
             // 
-            this.btnTempData.Location = new System.Drawing.Point(354, 17);
+            this.btnTempData.Location = new System.Drawing.Point(354, 13);
             this.btnTempData.Name = "btnTempData";
             this.btnTempData.Size = new System.Drawing.Size(75, 23);
             this.btnTempData.TabIndex = 1;
@@ -350,7 +396,7 @@ namespace EXCELAPPOTB
             // 
             // txtTempData
             // 
-            this.txtTempData.Location = new System.Drawing.Point(7, 20);
+            this.txtTempData.Location = new System.Drawing.Point(7, 16);
             this.txtTempData.Name = "txtTempData";
             this.txtTempData.Size = new System.Drawing.Size(341, 20);
             this.txtTempData.TabIndex = 0;
@@ -419,6 +465,19 @@ namespace EXCELAPPOTB
             0,
             0});
             // 
+            // btnExport
+            // 
+            this.btnExport.BackColor = System.Drawing.Color.Teal;
+            this.btnExport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExport.ForeColor = System.Drawing.Color.White;
+            this.btnExport.Location = new System.Drawing.Point(1185, 3);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(166, 61);
+            this.btnExport.TabIndex = 15;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -446,6 +505,7 @@ namespace EXCELAPPOTB
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblProcess);
             this.groupBox3.Controls.Add(this.progressBar1);
             this.groupBox3.Controls.Add(this.dgvPlan);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -475,7 +535,6 @@ namespace EXCELAPPOTB
             // 
             // San
             // 
-            this.San.Controls.Add(this.progressBarReview);
             this.San.Controls.Add(this.dgvData);
             this.San.Dock = System.Windows.Forms.DockStyle.Fill;
             this.San.Location = new System.Drawing.Point(3, 158);
@@ -509,82 +568,34 @@ namespace EXCELAPPOTB
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1366, 694);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
-            // label11
+            // lblProcess
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(748, 13);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 16);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Row header:";
+            this.lblProcess.AutoSize = true;
+            this.lblProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lblProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProcess.Location = new System.Drawing.Point(353, 78);
+            this.lblProcess.Name = "lblProcess";
+            this.lblProcess.Size = new System.Drawing.Size(137, 20);
+            this.lblProcess.TabIndex = 25;
+            this.lblProcess.Text = "Đang thực hiện ....";
+            this.lblProcess.Visible = false;
             // 
-            // txtRowHeaderData
+            // btnTemplate
             // 
-            this.txtRowHeaderData.Location = new System.Drawing.Point(837, 13);
-            this.txtRowHeaderData.Name = "txtRowHeaderData";
-            this.txtRowHeaderData.Size = new System.Drawing.Size(63, 20);
-            this.txtRowHeaderData.TabIndex = 26;
-            this.txtRowHeaderData.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.btnTemplate.Location = new System.Drawing.Point(354, 35);
+            this.btnTemplate.Name = "btnTemplate";
+            this.btnTemplate.Size = new System.Drawing.Size(75, 23);
+            this.btnTemplate.TabIndex = 28;
+            this.btnTemplate.Text = "Template";
+            this.btnTemplate.UseVisualStyleBackColor = true;
+            this.btnTemplate.Click += new System.EventHandler(this.btnTemplate_Click);
             // 
-            // label12
+            // txtTemplate
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(748, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 16);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Row header:";
-            // 
-            // txtRowHeaderPlan
-            // 
-            this.txtRowHeaderPlan.Location = new System.Drawing.Point(837, 13);
-            this.txtRowHeaderPlan.Name = "txtRowHeaderPlan";
-            this.txtRowHeaderPlan.Size = new System.Drawing.Size(63, 20);
-            this.txtRowHeaderPlan.TabIndex = 34;
-            this.txtRowHeaderPlan.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
-            // btnExport
-            // 
-            this.btnExport.BackColor = System.Drawing.Color.Teal;
-            this.btnExport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(1185, 3);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(166, 61);
-            this.btnExport.TabIndex = 15;
-            this.btnExport.Text = "Export";
-            this.btnExport.UseVisualStyleBackColor = false;
-            // 
-            // btnReview
-            // 
-            this.btnReview.BackColor = System.Drawing.Color.Teal;
-            this.btnReview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnReview.ForeColor = System.Drawing.Color.White;
-            this.btnReview.Location = new System.Drawing.Point(1185, 70);
-            this.btnReview.Name = "btnReview";
-            this.btnReview.Size = new System.Drawing.Size(166, 61);
-            this.btnReview.TabIndex = 16;
-            this.btnReview.Text = "Review";
-            this.btnReview.UseVisualStyleBackColor = false;
-            this.btnReview.Click += new System.EventHandler(this.btnReview_Click);
-            // 
-            // progressBarReview
-            // 
-            this.progressBarReview.Location = new System.Drawing.Point(340, 139);
-            this.progressBarReview.Name = "progressBarReview";
-            this.progressBarReview.Size = new System.Drawing.Size(563, 67);
-            this.progressBarReview.TabIndex = 24;
-            this.progressBarReview.Visible = false;
+            this.txtTemplate.Location = new System.Drawing.Point(7, 38);
+            this.txtTemplate.Name = "txtTemplate";
+            this.txtTemplate.Size = new System.Drawing.Size(341, 20);
+            this.txtTemplate.TabIndex = 27;
             // 
             // Form1
             // 
@@ -598,12 +609,14 @@ namespace EXCELAPPOTB
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRowHeaderPlan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanEndCol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanStartCol)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanEndRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPlanStartRow)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRowHeaderData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndColumn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartColumn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndRow)).EndInit();
@@ -611,12 +624,11 @@ namespace EXCELAPPOTB
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlan)).EndInit();
             this.San.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtRowHeaderData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtRowHeaderPlan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -663,8 +675,9 @@ namespace EXCELAPPOTB
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.NumericUpDown txtRowHeaderData;
         private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.Button btnReview;
-        private System.Windows.Forms.ProgressBar progressBarReview;
+        private System.Windows.Forms.Label lblProcess;
+        private System.Windows.Forms.Button btnTemplate;
+        private System.Windows.Forms.TextBox txtTemplate;
     }
 }
 
